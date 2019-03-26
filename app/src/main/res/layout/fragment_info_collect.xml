@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFF00"
+        tools:ignore="MissingConstraints">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="266dp"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="-34dp"
+            android:layout_marginRight="-120dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/img_header1" />
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="232dp"
+            android:background="#ECECEC">
+
+
+        </RelativeLayout>
+
+        <com.android.lixiang.base.utils.view.BounceScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/r1"
+            android:layout_marginTop="-232dp"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mStrangeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="187dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/round_relativelayout"
+                    android:elevation="4dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/mInfoCollectTitleTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/info_collect"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/mLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_below="@+id/mInfoCollectTitleTV2"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="23dp"
+                        android:background="#E9E9E9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/mPhotoAreaRL"
+                        android:layout_below="@+id/mLine1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="23dp"
+                                android:text="@string/property_owner"
+                                android:textColor="#5C5C5C"
+                                android:textSize="12dp" />
+
+                            <com.android.lixiang.base.utils.view.EditTextWithDeleteButton
+                                android:id="@+id/mPropertyOwnerNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="90dp"
+                                android:layout_marginRight="23dp"
+                                android:background="@null"
+                                android:ems="11"
+                                android:hint="请输入权属人姓名"
+                                android:singleLine="true"
+                                android:textColor="#9B9B9B"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginRight="23dp"
+                                android:background="#E9E9E9" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="23dp"
+                                android:text="@string/tel"
+                                android:textColor="#5C5C5C"
+                                android:textSize="12dp" />
+
+                            <com.android.lixiang.base.utils.view.EditTextWithDeleteButton
+                                android:id="@+id/mTelET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="90dp"
+                                android:layout_marginRight="23dp"
+                                android:background="@null"
+                                android:ems="11"
+                                android:hint="请输入权属人手机号码"
+                                android:inputType="phone"
+                                android:singleLine="true"
+                                android:textColor="#9B9B9B"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginRight="23dp"
+                                android:background="#E9E9E9" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mIdInfoRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="23dp"
+                                android:text="@string/credit_info"
+                                android:textColor="#5C5C5C"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/mIdTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="90dp"
+                                android:layout_marginRight="39dp"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="#9B9B9B"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="8dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="23dp"
+                                android:background="@drawable/ic_foward" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginRight="23dp"
+                                android:background="#E9E9E9" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mDirtLocationRl"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="23dp"
+                                android:text="@string/dirt_position"
+                                android:textColor="#5C5C5C"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/mDirtLocationTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="90dp"
+                                android:layout_marginRight="39dp"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="#9B9B9B"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="8dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="23dp"
+                                android:background="@drawable/ic_foward" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginRight="23dp"
+                                android:background="#E9E9E9" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/mMarkDirtRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/mMarkTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="90dp"
+                                android:layout_marginRight="39dp"
+                                android:textColor="#9B9B9B"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="23dp"
+                                android:text="@string/mark_dirt"
+                                android:textColor="#5C5C5C"
+                                android:textSize="12dp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="8dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="23dp"
+                                android:background="@drawable/ic_foward" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginRight="23dp"
+                                android:background="#E9E9E9" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/mPhotoAreaRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mImage1"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:transitionName="image"
+                            android:background="@drawable/img_add_image"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mImage2"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="82dp"
+                            android:transitionName="image"
+                            android:background="@drawable/img_add_image"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mImage3"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:transitionName="image"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="141dp"
+                            android:background="@drawable/img_add_image"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mImage4"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_centerVertical="true"
+                            android:transitionName="image"
+                            android:layout_marginLeft="200dp"
+                            android:background="@drawable/img_add_image"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/mUploadImagesIV"
+                            android:layout_width="31dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/img_camera" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/mInfoCollectTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="92dp"
+                    android:text="吉林省长春市农安县"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mInfoCollectTitleTV"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="14dp"
+                    android:text="东经124°31′―125°45′     北纬43°55′―44°55′"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+        </com.android.lixiang.base.utils.view.BounceScrollView>
+
+        <View
+            android:id="@+id/mStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#00000000"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mInfoCollectToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_below="@+id/mStatusBar"
+            android:background="#00000000"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <RelativeLayout
+            android:id="@+id/mCommitInfoRL"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#C5C5C5">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="提交信息"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

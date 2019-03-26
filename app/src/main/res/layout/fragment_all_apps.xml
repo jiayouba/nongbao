@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mAppAppsToolbar">
+
+            <View
+                android:id="@+id/classify_line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="14dp"
+                android:background="#EDEDED" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/classify_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/all"
+                android:textColor="#D8D8D8"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:id="@+id/mLine1"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_below="@+id/classify_tv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/mInfoCollectRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/colorWhite"
+                        android:elevation="2dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="80dp"
+                            android:layout_height="46dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="-24dp"
+                            android:layout_marginBottom="-12dp"
+                            android:background="@drawable/img_quick_accept_insurance" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/info_collect"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView2"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/info_collect_detail"
+                            android:textColor="#8A8A8A"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/mAllAppsFastInsureRL"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorWhite"
+                        android:elevation="2dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="60dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="-10dp"
+                            android:layout_marginBottom="-10dp"
+                            android:background="@drawable/img_quick_insure" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/quick_insure"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView3"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/quick_insure_detail"
+                            android:textColor="#8A8A8A"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mLine2"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_below="@+id/mLine1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/mAllAppsAssistSurveyRL"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/colorWhite"
+                        android:elevation="2dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="51dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="-2dp"
+                            android:layout_marginBottom="-8dp"
+                            android:background="@drawable/img_search_insure" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/assist_search"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView4"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/assist_search_detail"
+                            android:textColor="#8A8A8A"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorWhite"
+                        android:elevation="2dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/img_pig" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="农业养殖险"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView5"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="拍照估测养殖情况"
+                            android:textColor="#8A8A8A"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/fake_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mAppAppsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/fake_status_bar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText2" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

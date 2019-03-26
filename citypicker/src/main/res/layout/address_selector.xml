@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+            <!--android:id="@+id/textViewProvince"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--style="@style/tab" />-->
+            <!--</RelativeLayout>-->
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+            <!--android:id="@+id/textViewCity"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--style="@style/tab" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+            <!--android:id="@+id/textViewCounty"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--style="@style/tab" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+            <!--android:id="@+id/textViewStreet"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--style="@style/tab" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+            <!--android:id="@+id/textViewCun"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--style="@style/tab" />-->
+            <!--</RelativeLayout>-->
+            <TextView
+                android:id="@+id/textViewProvince"
+                style="@style/tab" />
+
+            <TextView
+                android:id="@+id/textViewCity"
+                style="@style/tab" />
+
+            <TextView
+                android:id="@+id/textViewCounty"
+                style="@style/tab" />
+
+            <TextView
+                android:id="@+id/textViewStreet"
+                style="@style/tab" />
+
+            <TextView
+                android:id="@+id/textViewCun"
+                style="@style/tab" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="0dp"
+            android:layout_height="2px"
+            android:layout_below="@+id/layout_tab"
+            android:background="#D0021B" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#DCDCDC" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.smarttop.library.widget.UninterceptableListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="#D0021B"
+            android:indeterminateTintMode="src_atop" />
+    </FrameLayout>
+
+</LinearLayout>

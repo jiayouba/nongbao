@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/mLocationInfoToolbar"
+            android:layout_above="@+id/mLocationConfirmRL"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:background="#ECECEC">
+
+            <RelativeLayout
+                android:id="@+id/bsv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ECECEC">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/mLocationPickerRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/mView1"
+                        android:background="#FFFFFF">
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_above="@+id/mRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#ECECEC"
+                        android:id="@+id/mView1"/>
+
+                    <RelativeLayout
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/mRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="#FFFFFF">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="21dp"
+                            android:text="@string/plant_location"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="52dp"
+                            android:layout_marginRight="45dp"
+                            android:background="#D9D9D9" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginRight="45dp"
+                            android:background="#F0F0F0">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/mPlantLocationET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#F0F0F0"
+                                android:imeOptions="actionDone"
+                                android:gravity="left|top"
+                                android:hint="@string/input_plant_location"
+                                android:inputType="textMultiLine"
+                                android:maxLength="800"
+                                android:minLines="7"
+                                android:padding="12dp"
+                                android:paddingLeft="11dp"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textColor="#686868"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/fake_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mLocationInfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/fake_status_bar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText.Gray" />
+
+        <RelativeLayout
+            android:id="@+id/mLocationConfirmRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#C5C5C5"
+            android:clickable="true"
+            android:focusable="true">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/confirm"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

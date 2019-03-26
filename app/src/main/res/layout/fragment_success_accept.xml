@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/mSuccessRL"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="#FFFFFF">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="58dp"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="84dp"
+                android:background="@drawable/img_accept_insurance_success" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp"
+                android:text="承保成功"
+                android:textColor="#5C5C5C"
+                android:textSize="18dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="33dp"
+                android:background="@drawable/button_border"/>
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="33dp"
+                android:background="#00000000">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看保单"
+                    android:textColor="#5C5C5C"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保单号：371038829191"
+                android:textColor="#5C5C5C"
+                android:textSize="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="84dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#6299FF"
+            android:layout_below="@+id/mSuccessRL"
+            android:layout_marginTop="11dp">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:text="完成"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

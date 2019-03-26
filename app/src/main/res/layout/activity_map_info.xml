@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <View
+            android:id="@+id/mMStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mMapInfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/mMStatusBar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/search_back_iv_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/search_back_iv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_back_gray_3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search_searchbar_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/style_home_pager_toolbar_search_view"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="226dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/index_search_icon"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:background="@drawable/ic_search_small" />
+
+                        <TextView
+                            android:id="@+id/edt_search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/index_search_icon"
+                            android:lines="1"
+                            android:text="输入地点/信息ID/手机号码/证件号码"
+                            android:textColor="#9B9B9B"
+                            android:textColorHint="#9B9B9B"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/mMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mMapToolbar" />
+
+        <RelativeLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="217dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/mLayerImageView"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/ic_layer" />
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginRight="-2dp"
+                android:layout_marginBottom="-4dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="178dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/ic_locate" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/mMapInfoLocateBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginRight="-2dp"
+                android:layout_marginBottom="-4dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="28dp"
+            android:layout_height="59dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="105dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="28dp"
+                android:layout_height="59dp"
+                android:background="@drawable/ic_zoom" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/mMapInfoZoomInBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginRight="-2dp"
+                        android:layout_marginBottom="-5dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/mMapInfoZoomOutBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="-2dp"
+                        android:layout_marginBottom="-4dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mMapInfoMaskRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+        <com.android.lixiang.base.utils.view.BounceScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:background="#72000000">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/mStrangeCard3"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginLeft="18dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/round_relativelayout"
+                android:elevation="4dp">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/mInfoCollectTitleTV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="信息ID：sadfsdfadfasdfa"
+                    android:textSize="18dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:id="@+id/mLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#E9E9E9"
+                    android:layout_below="@+id/mInfoCollectTitleTV2"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="12dp"/>
+                <LinearLayout
+                    android:layout_above="@+id/mPhotoAreaRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/mLine1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/property_owner"
+                            android:textColor="#5C5C5C"
+                            android:layout_marginLeft="23dp"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tel"
+                            android:textColor="#5C5C5C"
+                            android:layout_marginLeft="23dp"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/mIdInfoRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/credit_info"
+                            android:textColor="#5C5C5C"
+                            android:layout_marginLeft="23dp"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/mDirtLocationRl"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:text="地块位置"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/mMarkDirtRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:text="种植地点"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_dirt"
+                            android:textColor="#5C5C5C"
+                            android:layout_marginLeft="23dp"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:text="地块面积"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#E9E9E9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/mPhotoAreaRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="31dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/img_camera"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/mMapCancelIV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_cancel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_below="@+id/mStrangeCard3"/>
+            </RelativeLayout>
+
+        </com.android.lixiang.base.utils.view.BounceScrollView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E9E9E9"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:ignore="MissingConstraints">
+
+        <com.android.lixiang.base.utils.view.BounceScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mIdInfoToolbar"
+            android:layout_above="@+id/mIdConfirmRL"
+            android:scrollbars="none"
+            android:background="#E9E9E9">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/mIdKindRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="349dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:background="@drawable/round_relativelayout">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="21dp"
+                        android:text="@string/id_kind"
+                        android:textColor="#5C5C5C"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="52dp"
+                        android:layout_marginRight="35dp"
+                        android:background="#D9D9D9" />
+
+
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_marginLeft="38dp"-->
+                        <!--android:layout_marginTop="69dp"-->
+                        <!--android:layout_marginRight="38dp"-->
+                        <!--android:background="@drawable/round_relativelayout_5px"-->
+                        <!--android:elevation="4dp">-->
+
+                        <!--<android.support.v7.widget.AppCompatTextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="@string/id_num"-->
+                            <!--android:textColor="#5C5C5C"-->
+                            <!--android:textSize="14dp" />-->
+
+                        <!--<android.support.v7.widget.AppCompatImageView-->
+                            <!--android:layout_width="40dp"-->
+                            <!--android:layout_height="26.4dp"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_marginRight="12dp"-->
+                            <!--android:background="@drawable/img_idcard" />-->
+                    <!--</RelativeLayout>-->
+
+                    <com.loopeer.shadow.ShadowView
+                        android:id="@+id/mShadow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="49dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        android:padding="0dp"
+                        app:cornerRadius="10dp"
+                        app:cornerRadiusBL="21dp"
+                        app:cornerRadiusBR="21dp"
+                        app:cornerRadiusTL="21dp"
+                        app:cornerRadiusTR="21dp"
+                        app:shadowColor="#93B7F9"
+                        app:shadowDx="9"
+                        app:shadowDy="9"
+                        app:shadowMargin="27dp"
+                        app:shadowMarginBottom="27dp"
+                        app:shadowMarginLeft="18dp"
+                        app:shadowMarginRight="24dp"
+                        app:shadowMarginTop="13dp"
+                        app:shadowRadius="10dp"
+                        tools:ignore="MissingConstraints">
+
+                        <RelativeLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:id="@+id/mArea1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="#FFFFFF">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/id_num"
+                                android:textColor="#5C5C5C"
+                                android:textSize="14dp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="40dp"
+                                android:layout_height="26.4dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/img_idcard" />
+                        </RelativeLayout>
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="114dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        android:padding="0dp"
+                        app:cornerRadius="10dp"
+                        app:cornerRadiusBL="21dp"
+                        app:cornerRadiusBR="21dp"
+                        app:cornerRadiusTL="21dp"
+                        app:cornerRadiusTR="21dp"
+                        app:shadowColor="#93B7F9"
+                        app:shadowDx="9"
+                        app:shadowDy="9"
+                        app:shadowMargin="27dp"
+                        app:shadowMarginBottom="27dp"
+                        app:shadowMarginLeft="18dp"
+                        app:shadowMarginRight="24dp"
+                        app:shadowMarginTop="13dp"
+                        app:shadowRadius="10dp"
+                        tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/mArea2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFFFFF"
+                        >
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/organize_id"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="36.2dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_organize" />
+                    </RelativeLayout>
+                    </com.loopeer.shadow.ShadowView>
+
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="179dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        android:padding="0dp"
+                        app:cornerRadius="10dp"
+                        app:cornerRadiusBL="21dp"
+                        app:cornerRadiusBR="21dp"
+                        app:cornerRadiusTL="21dp"
+                        app:cornerRadiusTR="21dp"
+                        app:shadowColor="#93B7F9"
+                        app:shadowDx="9"
+                        app:shadowDy="9"
+                        app:shadowMargin="27dp"
+                        app:shadowMarginBottom="27dp"
+                        app:shadowMarginLeft="18dp"
+                        app:shadowMarginRight="24dp"
+                        app:shadowMarginTop="13dp"
+                        app:shadowRadius="10dp"
+                        tools:ignore="MissingConstraints">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="#FFFFFF"
+                        android:id="@+id/mArea3">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/social_id"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_social" />
+                    </RelativeLayout>
+                    </com.loopeer.shadow.ShadowView>
+                    <com.loopeer.shadow.ShadowView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="244dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        android:padding="0dp"
+                        app:cornerRadius="10dp"
+                        app:cornerRadiusBL="21dp"
+                        app:cornerRadiusBR="21dp"
+                        app:cornerRadiusTL="21dp"
+                        app:cornerRadiusTR="21dp"
+                        app:shadowColor="#93B7F9"
+                        app:shadowDx="9"
+                        app:shadowDy="9"
+                        app:shadowMargin="27dp"
+                        app:shadowMarginBottom="27dp"
+                        app:shadowMarginLeft="18dp"
+                        app:shadowMarginRight="24dp"
+                        app:shadowMarginTop="13dp"
+                        app:shadowRadius="10dp"
+                        tools:ignore="MissingConstraints">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFFFFF"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/mArea4">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/other"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_other" />
+                    </RelativeLayout>
+                    </com.loopeer.shadow.ShadowView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mInputAreaRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_below="@+id/mIdKindRL"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round_relativelayout">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="21dp"
+                        android:text="@string/id_number"
+                        android:textColor="#5C5C5C"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="52dp"
+                        android:layout_marginRight="35dp"
+                        android:background="#D9D9D9" />
+
+                    <RelativeLayout
+                        android:id="@+id/index_search_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginRight="35dp"
+                        android:background="@drawable/style_home_pager_toolbar_search_view"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical">
+
+                        <com.android.lixiang.base.utils.view.EditTextWithDeleteButton
+                            android:id="@+id/mIdET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/input_id"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColorHint="#9B9B9B"
+                            android:inputType="number"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/mScanIV"
+                        android:layout_width="45dp"
+                        android:layout_height="46dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="101dp"
+                        android:background="@drawable/img_camera2" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="151dp"
+                        android:text="@string/ocr"
+                        android:textColor="#9B9B9B"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#E9E9E9"
+                    android:layout_below="@+id/mInputAreaRL"/>
+
+            </RelativeLayout>
+
+        </com.android.lixiang.base.utils.view.BounceScrollView>
+
+        <View
+            android:id="@+id/fake_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mIdInfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/fake_status_bar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText.Gray" />
+
+        <RelativeLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/mIdConfirmRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#C5C5C5">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:text="@string/confirm"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

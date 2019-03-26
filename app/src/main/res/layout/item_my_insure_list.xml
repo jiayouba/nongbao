@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:elevation="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:id="@+id/mMyInsureNumberTV"
+            android:textColor="#5C5C5C"
+            android:text="NO.3923919732878"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="23dp"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:textSize="10dp"
+            android:text="@string/recognizee"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="23dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:textSize="10dp"
+            android:text="@string/recognizee_credit_id"
+            android:layout_marginTop="64dp"
+            android:layout_marginLeft="23dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:textSize="10dp"
+            android:text="@string/bank_account"
+            android:layout_marginTop="84dp"
+            android:layout_marginLeft="23dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:textSize="10dp"
+            android:text="@string/phone_number"
+            android:layout_marginTop="104dp"
+            android:layout_marginLeft="23dp" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ABABAB"
+            android:textSize="10dp"
+            android:text="@string/test_recognizee"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="113dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ABABAB"
+            android:textSize="10dp"
+            android:text="@string/test_recognizee_credit_id"
+            android:layout_marginTop="64dp"
+            android:layout_marginLeft="113dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ABABAB"
+            android:textSize="10dp"
+            android:text="@string/test_bank_account"
+            android:layout_marginTop="84dp"
+            android:layout_marginLeft="113dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ABABAB"
+            android:textSize="10dp"
+            android:text="@string/test_phone_number"
+            android:layout_marginTop="104dp"
+            android:layout_marginLeft="113dp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/img_item_all_info"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isChecked"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:text="@string/checked"
+            />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

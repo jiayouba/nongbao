@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/mAddressRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:layout_below="@+id/mInsureCountToolbar">
+            <RelativeLayout
+                android:id="@+id/mInputCountRL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="57dp"
+                android:background="#EFEFEF"
+                android:layout_marginTop="62dp">
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/mPlantLocationET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F0F0F0"
+                    android:gravity="left|top"
+                    android:hint="请输入数字（保留小数点后两位）"
+                    android:inputType="textMultiLine"
+                    android:maxLength="800"
+                    android:minLines="7"
+                    android:padding="12dp"
+                    android:textColor="#B5B5B5"
+                    android:paddingLeft="11dp"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+            <com.weigan.loopview.LoopView
+                android:layout_marginTop="-18dp"
+                android:id="@+id/loopView"
+                android:layout_width="50dp"
+                android:layout_height="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="57dp" />
+            <RelativeLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/mInsureCountConfirmRL"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_relativelayout_5px_blue"
+                android:layout_below="@+id/mInputCountRL"
+                android:layout_marginTop="55dp">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/mStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#00000000"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mInsureCountToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/mStatusBar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText.Gray"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

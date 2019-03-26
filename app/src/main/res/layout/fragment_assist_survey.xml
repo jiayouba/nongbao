@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <View
+            android:id="@+id/mStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#00000000"
+            android:elevation="2dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mBottomView">
+
+            <com.android.lixiang.base.utils.view.Gradient2Layout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/mSearchRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="121dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/round_relativelayout_5px">
+
+
+                <RelativeLayout
+                    android:layout_width="290dp"
+                    android:layout_height="19dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/mSearchIconIV"
+                        android:layout_width="18dp"
+                        android:layout_height="19dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_search_small" />
+
+                    <com.android.lixiang.base.utils.view.EditTextWithDeleteButton
+                        android:id="@+id/mInfoEntrySearchET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/mSearchIconIV"
+                        android:background="@null"
+                        android:ems="11"
+                        android:hint="请输入保单号/被保险人手机号码/证件号码"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:textColor="#9B9B9B"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mSearchRelativeLayout">
+
+                <RelativeLayout
+                    android:layout_width="182dp"
+                    android:layout_height="159dp"
+                    android:layout_centerInParent="true">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="125dp"
+                        android:layout_height="114dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/img_info_search" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/survey_hint"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mSurveyToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_below="@+id/mStatusBar"
+            android:background="#00000000"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <RelativeLayout
+            android:id="@+id/mBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_below="@+id/mInfoEntryRelativeLayout"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="38dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/mMyInsuranceRL"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@color/colorWhite"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="15dp"
+                        android:elevation="2dp">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="44dp"
+                            android:layout_height="58dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="-13dp"
+                            android:layout_marginRight="-9dp"
+                            android:background="@drawable/img_info_2" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:text="我的保单"
+                            android:textColor="#5C5C5C"
+                            android:textSize="14dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView2"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="浏览保单列表"
+                            android:textColor="#8A8A8A"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/mMapInfoRL"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@color/colorWhite"
+                        android:layout_marginTop="2dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="15dp"
+                        android:elevation="2dp">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="44dp"
+                            android:layout_height="58dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="-11dp"
+                            android:layout_marginRight="-4dp"
+                            android:background="@drawable/img_info_3" />
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/mInfoTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:textColor="#5C5C5C"
+                            android:text="@string/map_info"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mInfoTextView3"
+                            android:textSize="12dp"
+                            android:textColor="#8A8A8A"
+                            android:text="@string/map_info_detail"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

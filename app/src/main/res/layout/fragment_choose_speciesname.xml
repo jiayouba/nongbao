@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+
+        <RelativeLayout
+            android:id="@+id/mChooseSpeciesRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mChooseSpeciesRLToolbar"
+
+            >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider"
+                android:id="@+id/speciesitems"
+                android:background="#ffffff"
+                android:scrollbars="none">
+
+
+            </ListView>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="8dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_foward"
+                android:layout_alignParentRight="true"
+                android:id="@+id/testicon"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="16dp"/>
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:id="@+id/testbutton"
+                android:visibility="invisible"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/rice_kind"
+                android:text="水稻种类"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/mChooseSpeciesRLStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusbar_view_height"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mChooseSpeciesRLToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/mChooseSpeciesRLStatusBar"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText.Gray"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
